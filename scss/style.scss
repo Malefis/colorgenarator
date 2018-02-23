@@ -1,0 +1,71 @@
+$textcolor: #FFF;
+$text-colorbtn: #444;
+$btn-bg: #FFF;
+
+//Media needs to be 294px
+$gutter-width: 3.2rem;
+$outputWidth: 29.4rem;
+$output-width-mobile: 100%;
+@mixin font {
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+
+html{
+  font-size: 62.5%
+}
+body{
+  @include font;
+  background-color: #444;
+}
+.colorOutput{
+  opacity: 1;
+  width: $outputWidth;
+  height: 7rem;
+  margin-top: 1rem;
+  box-sizing: border-box;
+}
+#createHex{
+  @include font;
+  text-transform: uppercase;
+  height: 5rem;
+  border-radius: 100px;
+  padding: 0;
+  font-weight: 100;
+  border: none;
+  background-color: $btn-bg;
+  color: $text-colorbtn;
+  width: calc(#{$outputWidth} * 2 + #{$gutter-width});
+}
+.output{
+  color: $textcolor;
+  box-sizing: border-box;
+  margin-top: 1rem;
+  font-size: 2rem
+}
+.colorOutput{
+  border: 2px solid white;
+}
+#colorOutput2{
+  margin-left: $gutter-width;
+}
+#output2{
+  margin-left: $gutter-width;
+}
+.main{
+  display: flex;
+  flex-direction: row;
+}
+.outputBox{
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 620px){
+  .main{flex-direction: column;}
+  #colorOutput2{margin-left: 0px;}
+  #output2{margin-left: 0px; margin-top: 2rem}
+  #createHex{width: #{$output-width-mobile}}
+  .output{width: #{$output-width-mobile}}
+  .colorOutput{width: #{$output-width-mobile}}
+}
