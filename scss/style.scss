@@ -61,7 +61,7 @@ body{
   display: flex;
   flex-direction: column;
 }
-@media (max-width: 620px){
+@media screen and (max-width: 620px){
   .main{flex-direction: column;}
   #colorOutput2{margin-left: 0px;}
   #output2{margin-left: 0px; margin-top: 2rem}
